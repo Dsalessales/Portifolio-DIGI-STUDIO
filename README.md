@@ -11,11 +11,14 @@ media/          vídeo do tema Kissa
 _headers        cache no Cloudflare Pages
 ```
 
-## Publicar no Cloudflare Pages
+## Publicar no Cloudflare
 
-1. Cloudflare → Workers & Pages → Create → Pages → **Connect to Git** e escolha este repositório.
-2. Framework preset: **None**. Build command: vazio. Build output directory: `/`.
-3. Cada push na branch `main` publica o site de novo.
+O repositório já traz o `wrangler.jsonc`, que publica a pasta como site estático.
+
+1. Cloudflare → Workers & Pages → o projeto → Settings → Build.
+2. Build command: vazio. Deploy command: `npx wrangler deploy`.
+3. O `name` no `wrangler.jsonc` precisa ser o mesmo nome do projeto no Cloudflare (hoje `studio-digi`).
+4. Cada push na branch `main` publica o site de novo.
 
 ## Editar
 
