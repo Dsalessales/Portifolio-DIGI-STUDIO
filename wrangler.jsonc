@@ -1,6 +1,6 @@
 {
   // Cloudflare Workers: serves this folder as a static site
-  "name": "studio-digi",
+  "name": "portifolio-digi-studio",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./",

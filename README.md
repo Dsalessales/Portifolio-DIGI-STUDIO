@@ -17,7 +17,7 @@ O repositório já traz o `wrangler.jsonc`, que publica a pasta como site estát
 
 1. Cloudflare → Workers & Pages → o projeto → Settings → Build.
 2. Build command: vazio. Deploy command: `npx wrangler deploy`.
-3. O `name` no `wrangler.jsonc` precisa ser o mesmo nome do projeto no Cloudflare (hoje `studio-digi`).
+3. O `name` no `wrangler.jsonc` precisa ser o mesmo nome do projeto no Cloudflare (hoje `portifolio-digi-studio`).
 4. Cada push na branch `main` publica o site de novo.
 
 ## Editar
