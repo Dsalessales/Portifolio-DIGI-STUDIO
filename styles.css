@@ -203,7 +203,14 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .cta__title { position: relative; font-size: clamp(44px, 7vw, 104px); line-height: .98; font-weight: 600; letter-spacing: -.045em; }
 .cta__title em { color: #fff; }
 .cta__text { position: relative; margin-top: 18px; font-size: 19px; }
-.cta .btn { position: relative; margin-top: 34px; }
+.cta__actions { position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 34px; }
+.btn--line { border-color: var(--ink); color: var(--ink); }
+.btn--line:hover { background: var(--ink); color: var(--paper); }
+.cta__mail { position: relative; margin-top: 22px; font-weight: 600; }
+.cta__mail a { text-decoration-color: rgba(17, 16, 20, .4); text-underline-offset: 4px; }
+.footer__links { display: flex; flex-wrap: wrap; gap: 22px; }
+.footer__links a { color: var(--paper); text-decoration: none; opacity: .8; }
+.footer__links a:hover { opacity: 1; }
 
 /* footer */
 .footer { padding: 34px 0; background: var(--ink); color: rgba(246, 244, 240, .6); font-size: 14px; }
