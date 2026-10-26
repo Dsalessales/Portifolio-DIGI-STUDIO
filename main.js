@@ -65,9 +65,8 @@
     });
   });
 
-  // drag to scroll the Kissa screens
-  const strip = document.querySelector('[data-strip]');
-  if (strip) {
+  // drag to scroll the project screens
+  document.querySelectorAll('[data-strip]').forEach((strip) => {
     let down = false; let startX = 0; let startLeft = 0;
     strip.addEventListener('pointerdown', (e) => {
       if (e.pointerType !== 'mouse') return;
@@ -78,14 +77,26 @@
     const stop = () => { down = false; strip.classList.remove('is-dragging'); };
     strip.addEventListener('pointerup', stop);
     strip.addEventListener('pointercancel', stop);
-  }
+  });
 
-  // the video only plays while it is on screen
-  const video = document.querySelector('.phone__video');
-  if (video) {
+  // videos only play while they are on screen
+  document.querySelectorAll('.phone__video').forEach((video) => {
     if (reduced) { video.removeAttribute('autoplay'); video.pause(); video.controls = true; }
     else if ('IntersectionObserver' in window) {
       new IntersectionObserver(([entry]) => { if (entry.isIntersecting) video.play().catch(() => {}); else video.pause(); }, { threshold: 0.25 }).observe(video);
     }
+  });
+
+  // floating WhatsApp button appears after the hero and steps aside at the final call to action
+  const wa = document.querySelector('[data-wa-float]');
+  const cta = document.querySelector('.cta');
+  if (wa) {
+    let ctaVisible = false;
+    const sync = () => wa.classList.toggle('is-on', window.scrollY > window.innerHeight * 0.6 && !ctaVisible);
+    if (cta && 'IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => { ctaVisible = entry.isIntersecting; sync(); }, { threshold: 0.2 }).observe(cta);
+    }
+    sync();
+    window.addEventListener('scroll', sync, { passive: true });
   }
 })();
