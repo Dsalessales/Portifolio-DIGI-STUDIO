@@ -243,6 +243,21 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .step h3 { margin-top: 20px; font-size: 21px; font-weight: 600; }
 .step p { margin-top: 10px; font-size: 15px; color: rgba(246, 244, 240, .62); }
 
+/* studio */
+.studio { padding: 120px 0; }
+.studio__grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 40px 60px; align-items: end; }
+.studio__text { margin-top: 26px; max-width: 34em; font-size: 19px; color: var(--muted); }
+.person { margin: 0; display: grid; grid-template-columns: 112px 1fr; gap: 20px; align-items: center; padding: 18px; border-radius: var(--radius); background: var(--sheet); box-shadow: 0 1px 0 var(--line); }
+.person img { width: 112px; height: 112px; border-radius: 16px; object-fit: cover; background: var(--ink); }
+.person figcaption { display: grid; gap: 4px; }
+.person strong { font-size: 20px; font-weight: 600; letter-spacing: -.02em; }
+.person span { font-size: 15px; color: var(--muted); }
+.person a { justify-self: start; display: inline-flex; align-items: center; min-height: 32px; font-size: 15px; font-weight: 600; color: var(--ink); text-underline-offset: 4px; text-decoration-color: var(--orange); }
+.principles { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin: 20px 0 0; padding: 0; list-style: none; }
+.principles li { padding-top: 22px; border-top: 1px solid var(--line); }
+.principles strong { display: block; font-size: 19px; font-weight: 600; letter-spacing: -.01em; }
+.principles span { display: block; margin-top: 8px; font-size: 15px; color: var(--muted); max-width: 26em; }
+
 /* call to action */
 .cta { padding: 120px 0; background: var(--orange); color: var(--ink); overflow: hidden; }
 .cta__inner { position: relative; text-align: center; display: flex; flex-direction: column; align-items: center; }
@@ -321,6 +336,12 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .services__grid, .ways { grid-template-columns: 1fr; }
   .service h3 { margin-top: 22px; }
   .process { padding: 90px 0; }
+  .studio { padding: 90px 0; }
+  .studio__grid { grid-template-columns: 1fr; }
+  .studio__text { font-size: 17px; }
+  .person { grid-template-columns: 88px 1fr; gap: 16px; }
+  .person img { width: 88px; height: 88px; }
+  .principles { grid-template-columns: 1fr; margin-top: 0; }
   .steps { grid-template-columns: 1fr; }
   .cta { padding: 90px 0; }
   .cta__mark { width: 220px; height: 220px; right: -70px; top: -80px; }

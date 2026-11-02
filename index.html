@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@800&text=%E5%96%AB%E8%8C%B6&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=7">
+  <link rel="stylesheet" href="/styles.css?v=8">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -35,6 +35,8 @@
     "logo": "https://studiodigi.com.br/images/email/studio-digi-logo.png",
     "description": "Estúdio digital que cria sites, lojas virtuais, temas Shopify e aplicativos sob medida, do conceito ao lançamento.",
     "email": "contato@studiodigi.com.br",
+    "address": { "@type": "PostalAddress", "addressLocality": "Campinas", "addressRegion": "SP", "addressCountry": "BR" },
+    "founder": { "@type": "Person", "name": "Douglas Sales", "jobTitle": "Desenvolvedor full stack", "sameAs": ["https://www.instagram.com/dsales.nascimento/"] },
     "sameAs": ["https://www.instagram.com/studio.digi_/"]
   }
   </script>
@@ -55,6 +57,7 @@
         <a href="#kissa">Kissa</a>
         <a href="#servicos">Serviços</a>
         <a href="#processo">Processo</a>
+        <a href="#estudio">Estúdio</a>
         <a class="btn btn--dark nav__cta" href="https://wa.me/5519990105959?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20STUDIO%20DIGI%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Falar no WhatsApp</a>
       </nav>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu>
@@ -99,7 +102,7 @@
         <div class="ats__copy">
           <p class="kicker reveal"><span>Projeto para cliente</span><span class="rule"></span><span>E-commerce</span></p>
           <h2 class="ats__title reveal" id="ats-title">AT STUDIO<span>®</span></h2>
-          <p class="ats__lead reveal">Uma loja de moda com linguagem de revista. A abertura transforma as fotos dos produtos no logo da marca, e cada tela foi desenhada para o desktop e para o celular.</p>
+          <p class="ats__lead reveal">Loja virtual da DACION CREW, marca de roupas simples com elegância: camisas slim fit de manga curta e longa. A abertura transforma as fotos dos produtos no logo da marca, e cada tela foi desenhada para o desktop e para o celular.</p>
           <ul class="ats__features">
             <li class="reveal"><b>01</b><div><strong>Abertura coreografada</strong><span>As fotos dos produtos se empilham, formam o logo e revelam a loja.</span></div></li>
             <li class="reveal"><b>02</b><div><strong>Tipografia editorial</strong><span>Logotipo em escala gigante, catálogo em grade e hover com cursor próprio.</span></div></li>
@@ -206,6 +209,19 @@
         </div>
 
         <div class="grid" data-grid>
+          <article class="card card--full reveal" data-kind="site">
+            <div class="card__media card__media--swap card__media--paper">
+              <img src="/images/lomode/lomode-home.webp" alt="Protótipo da página inicial da loja Lomode: banner Presença em silêncio, menu de categorias e logotipo centralizado" width="1600" height="686" loading="lazy">
+              <img class="card__alt" src="/images/lomode/lomode-produto.webp" alt="" width="1600" height="686" loading="lazy">
+            </div>
+            <div class="card__body">
+              <div>
+                <p class="card__status card__status--client">Cliente · Em desenvolvimento</p><h3>Lomode</h3><p>Loja virtual de moda feminina atemporal. Protótipo navegável com coleções filtráveis, página de produto com guia de medidas, "Compre o look" e guarda-roupa inteligente.</p>
+              </div>
+              <ul class="tags"><li>E-commerce</li><li>Moda</li></ul>
+            </div>
+          </article>
+
           <article class="card card--wide reveal" data-kind="site">
             <a class="card__link" href="#atstudio" aria-label="Ver o projeto AT STUDIO"></a>
             <div class="card__media card__media--swap card__media--ink">
@@ -349,6 +365,30 @@
       </div>
     </section>
 
+    <!-- studio -->
+    <section class="studio" id="estudio" aria-labelledby="estudio-title">
+      <div class="wrap studio__grid">
+        <div class="studio__copy">
+          <p class="kicker kicker--dark reveal"><span>Estúdio</span><span class="rule"></span><span>Campinas, SP</span></p>
+          <h2 class="section-title reveal" id="estudio-title">Quem desenha também <em>programa.</em></h2>
+          <p class="studio__text reveal">O STUDIO DIGI é um estúdio de produtos digitais em Campinas, criado por Douglas Sales, desenvolvedor full stack. Cuidamos do projeto inteiro (estratégia, interface, animação e código), de sites e lojas Shopify a aplicativos e experiências interativas. Por sermos um estúdio enxuto, quem conversa com você é quem constrói o seu projeto.</p>
+        </div>
+        <figure class="person reveal">
+          <img src="/images/studio/douglas-sales.webp" alt="Retrato de Douglas Sales" width="400" height="400" loading="lazy">
+          <figcaption>
+            <strong>Douglas Sales</strong>
+            <span>Fundador e desenvolvedor full stack</span>
+            <a href="https://www.instagram.com/dsales.nascimento/" target="_blank" rel="noopener">@dsales.nascimento</a>
+          </figcaption>
+        </figure>
+        <ul class="principles">
+          <li class="reveal"><strong>Design e código juntos</strong><span>O que é desenhado é o que vai ao ar, sem perder detalhes na passagem.</span></li>
+          <li class="reveal"><strong>Sob medida</strong><span>Nada de template: cada projeto nasce do zero para o seu negócio.</span></li>
+          <li class="reveal"><strong>Contato direto</strong><span>Você fala com quem faz, do primeiro rascunho ao lançamento.</span></li>
+        </ul>
+      </div>
+    </section>
+
     <!-- call to action -->
     <section class="cta" aria-labelledby="cta-title">
       <div class="wrap cta__inner">
@@ -367,7 +407,7 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <a class="brand brand--light" href="#top"><span class="brand__mark" aria-hidden="true"></span><span>STUDIO DIGI</span></a>
-      <p>© 2026 STUDIO DIGI. Todos os direitos reservados.</p>
+      <p>© 2026 STUDIO DIGI · Campinas, SP. Todos os direitos reservados.</p>
       <nav class="footer__links" aria-label="Contato">
         <a href="https://www.instagram.com/studio.digi_/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://wa.me/5519990105959?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20STUDIO%20DIGI%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">WhatsApp</a>
