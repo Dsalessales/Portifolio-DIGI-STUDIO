@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://studiodigi.com.br/sitemap.xml

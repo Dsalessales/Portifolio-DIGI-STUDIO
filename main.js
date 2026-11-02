@@ -81,8 +81,9 @@
 
   // videos only play while they are on screen
   document.querySelectorAll('.phone__video').forEach((video) => {
-    if (reduced) { video.removeAttribute('autoplay'); video.pause(); video.controls = true; }
-    else if ('IntersectionObserver' in window) {
+    if (reduced) { video.pause(); video.controls = true; }
+    else if (!('IntersectionObserver' in window)) { video.play().catch(() => {}); }
+    else {
       new IntersectionObserver(([entry]) => { if (entry.isIntersecting) video.play().catch(() => {}); else video.pause(); }, { threshold: 0.25 }).observe(video);
     }
   });
