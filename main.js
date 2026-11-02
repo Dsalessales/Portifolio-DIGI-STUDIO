@@ -88,10 +88,12 @@
 
   // videos only play while they are on screen
   document.querySelectorAll('.phone__video').forEach((video) => {
+    video.muted = true; // iOS only plays inline video from script when it is muted
     if (reduced) { video.pause(); video.controls = true; }
-    else if (!('IntersectionObserver' in window)) { video.play().catch(() => {}); }
+    else if (!('IntersectionObserver' in window)) { video.play().catch(() => { video.controls = true; }); }
     else {
-      new IntersectionObserver(([entry]) => { if (entry.isIntersecting) video.play().catch(() => {}); else video.pause(); }, { threshold: 0.25 }).observe(video);
+      // if the browser blocks autoplay (iPhone in Low Power Mode), show the controls so it can be played by hand
+      new IntersectionObserver(([entry]) => { if (entry.isIntersecting) video.play().catch(() => { video.controls = true; }); else video.pause(); }, { threshold: 0.25 }).observe(video);
     }
   });
 
