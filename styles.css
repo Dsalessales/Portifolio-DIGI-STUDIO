@@ -264,7 +264,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .quote__by { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 20px; margin-top: auto; padding-top: 26px; border-top: 1px solid var(--line); }
 .avatar { position: relative; flex: none; width: 84px; height: 84px; }
 .avatar__photo { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; }
-.avatar__badge { position: absolute; right: -8px; bottom: -8px; width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--sheet); background: #fff; object-fit: cover; }
+.avatar__badge { position: absolute; right: -10px; bottom: -10px; width: 50px; height: 50px; border-radius: 50%; border: 3px solid var(--sheet); background: #fff; object-fit: cover; }
 .quote__who { display: grid; gap: 3px; }
 .quote__who strong { font-size: 18px; font-weight: 600; }
 .quote__who span { font-size: 14px; color: var(--muted); }
