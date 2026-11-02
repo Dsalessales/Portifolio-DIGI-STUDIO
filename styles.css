@@ -173,7 +173,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-flow: dense; gap: 22px; }
 @media (min-width: 761px) {
   .grid > .card:not(.card--wide):not(.card--full) .card__media { flex: 1; aspect-ratio: auto; min-height: 260px; }
-  .grid > .card:not(.card--wide):not(.card--full) .card__body { flex: none; }
+  .grid > .card--wide .card__media { flex: 1 0 auto; }
+  .grid > .card .card__body { flex: none; }
 }
 .lab { margin-top: 70px; }
 .lab[hidden] { display: none; }
