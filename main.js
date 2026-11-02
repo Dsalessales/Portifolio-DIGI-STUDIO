@@ -51,18 +51,25 @@
     }, { passive: true });
   }
 
-  // project filters
+  // project filters (a project can belong to more than one front)
   const filters = document.querySelector('[data-filters]');
-  const cards = [...document.querySelectorAll('[data-grid] .card')];
-  filters.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-filter]');
-    if (!btn) return;
-    filters.querySelectorAll('[data-filter]').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
-    const kind = btn.dataset.filter;
+  const cards = [...document.querySelectorAll('[data-grid] .card, [data-lab] .card')];
+  const lab = document.querySelector('[data-lab]');
+  const applyFilter = (kind) => {
+    filters.querySelectorAll('[data-filter]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filter === kind)));
     cards.forEach((card) => {
-      card.hidden = kind !== 'all' && card.dataset.kind !== kind;
+      card.hidden = kind !== 'all' && !card.dataset.kind.split(' ').includes(kind);
       if (!card.hidden) card.classList.add('is-in');
     });
+    if (lab) lab.hidden = !lab.querySelector('.card:not([hidden])');
+  };
+  filters.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-filter]');
+    if (btn) applyFilter(btn.dataset.filter);
+  });
+  // the four fronts open the project grid already filtered
+  document.querySelectorAll('[data-goto-filter]').forEach((link) => {
+    link.addEventListener('click', () => applyFilter(link.dataset.gotoFilter));
   });
 
   // drag to scroll the project screens
