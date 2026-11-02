@@ -210,6 +210,11 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .card__media--ink { background: #14110e; }
 .card__media--sky { background: linear-gradient(160deg, #7aa7ff, #b7c9ff); }
 .card__media--paper { background: #efe9df; }
+/* AT STUDIO: the wordmark runs to the image edges, so show the whole screen instead of cropping it */
+.card__media--ats { background: #090909; transition: background-color .6s; }
+.card--ats .card__media img { object-fit: contain; }
+.card--ats:hover .card__media--ats { background: #ede5de; }
+.card--ats:hover .card__media img { transform: none; }
 .card__media--duo { display: grid; grid-template-columns: 1fr 1fr; gap: 6%; align-items: center; padding: 8%; }
 .card__media--duo img { height: auto; border-radius: 12px; box-shadow: 0 20px 40px -20px rgba(17, 16, 20, .4); }
 .card__body { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; padding: 22px 24px 24px; flex: 1; }
@@ -380,6 +385,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .fronts > *, .ways > *, .lab__grid > *, .quotes > * { scroll-snap-align: start; }
   .swipe-hint { display: block; }
   .card--wide .card__media, .card--full .card__media { aspect-ratio: 16 / 10; }
+  .card--ats .card__media { aspect-ratio: 16 / 9; }
   .card__body { padding: 18px 18px 20px; gap: 12px; }
   .card h3 { font-size: 19px; }
   .card p { font-size: 14px; }
