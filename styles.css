@@ -327,6 +327,13 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .footer__inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
 .footer__top { text-decoration: none; color: var(--paper); }
 
+/* hero: visible on first paint; only a short rise, so the headline never waits for JavaScript */
+@keyframes hero-in { from { transform: translateY(18px); } }
+.hero-in { animation: hero-in .9s var(--ease) both; }
+.hero__title.hero-in { animation-delay: .06s; }
+.hero__text.hero-in { animation-delay: .12s; }
+.hero__actions.hero-in { animation-delay: .18s; }
+
 /* reveal on scroll */
 .js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
 .js .reveal.is-in { opacity: 1; transform: none; }
@@ -420,5 +427,6 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .tile, .game__ball, .game__star { animation: none; }
   .wa-float { transition: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
+  .hero-in { animation: none; }
   .card, .card__media img, .btn { transition: none; }
 }
