@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@800&text=%E5%96%AB%E8%8C%B6&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=12">
+  <link rel="stylesheet" href="/styles.css?v=13">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,6 +42,9 @@
   </script>
   <script>document.documentElement.classList.add('js')</script>
   <script src="/main.js?v=5" defer></script>
+  <script src="/vendor/gsap.min.js" defer></script>
+  <script src="/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="/motion.js?v=1" defer></script>
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -90,6 +93,35 @@
       </div>
     </section>
 
+    <!-- showcase: the laptop turns and changes project as the page scrolls -->
+    <section class="showcase" id="vitrine" aria-labelledby="vitrine-title" data-showcase>
+      <div class="wrap showcase__inner">
+        <div class="showcase__copy">
+          <p class="kicker kicker--dark"><span>Projetos</span><span class="rule"></span><span>Em movimento</span></p>
+          <h2 class="section-title" id="vitrine-title">Do conceito à <em>tela.</em></h2>
+          <ol class="showcase__list">
+            <li class="is-active"><span>01</span><strong>AT STUDIO</strong><em>E-commerce de moda</em></li>
+            <li><span>02</span><strong>VANTE</strong><em>Identidade e site</em></li>
+            <li><span>03</span><strong>MOTION</strong><em>Galeria em WebGL</em></li>
+            <li><span>04</span><strong>Kissa</strong><em>Tema Shopify</em></li>
+          </ol>
+        </div>
+        <div class="showcase__device">
+          <div class="laptop" data-laptop>
+            <div class="laptop__lid">
+              <div class="laptop__screen">
+                <img src="/images/showcase/atstudio.webp" alt="Tela inicial da loja AT STUDIO" width="1280" height="800">
+                <img src="/images/showcase/vante.webp" alt="Abertura do site VANTE" width="1280" height="800" loading="lazy">
+                <img src="/images/showcase/motion.webp" alt="Galeria de arte MOTION com carrossel curvo" width="1280" height="800" loading="lazy">
+                <img src="/images/showcase/kissa.webp" alt="Página inicial do tema Kissa" width="1280" height="800" loading="lazy">
+              </div>
+            </div>
+            <div class="laptop__base" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- services: what we do -->
     <section class="services" id="servicos" aria-labelledby="servicos-title">
       <div class="wrap">
@@ -99,6 +131,25 @@
             <h2 class="section-title reveal" id="servicos-title">Um estúdio, <em>quatro frentes.</em></h2>
           </div>
           <p class="section-text reveal">Criamos e desenvolvemos websites, aplicativos e softwares, unindo design, performance e identidade de marca.</p>
+        </div>
+        <!-- the four fronts pass across the screen as the page scrolls (desktop only; the cards below carry the same content) -->
+        <div class="kinetic" data-kinetic aria-hidden="true">
+          <div class="kgroup">
+            <p class="kgroup__word"><small>01 / 04</small><span>Websites</span></p>
+            <div class="kgroup__thumbs"><figure class="kthumb kthumb--0"><img src="/images/vante/vante-hero.webp" alt="" loading="lazy"></figure><figure class="kthumb kthumb--1"><img src="/images/motion/motion.webp" alt="" loading="lazy"></figure><figure class="kthumb kthumb--2"><img src="/images/vante/vante-concept.webp" alt="" loading="lazy"></figure></div>
+          </div>
+          <div class="kgroup">
+            <p class="kgroup__word"><small>02 / 04</small><span>E-commerce</span></p>
+            <div class="kgroup__thumbs"><figure class="kthumb kthumb--0"><img src="/images/at-studio/at-studio-desktop.webp" alt="" loading="lazy"></figure><figure class="kthumb kthumb--1"><img src="/images/kissa/kissa-wide.webp" alt="" loading="lazy"></figure><figure class="kthumb kthumb--2"><img src="/images/at-studio/at-studio-desktop-red.webp" alt="" loading="lazy"></figure></div>
+          </div>
+          <div class="kgroup">
+            <p class="kgroup__word"><small>03 / 04</small><span>Aplicativos</span></p>
+            <div class="kgroup__thumbs"><figure class="kthumb kthumb--0"><img src="/images/projects/brinca-mascot.webp" alt="" loading="lazy"></figure><figure class="kthumb kthumb--1"><img src="/images/projects/smart-light.webp" alt="" loading="lazy"></figure><figure class="kthumb kthumb--2"><img src="/images/projects/convite-mascot.webp" alt="" loading="lazy"></figure></div>
+          </div>
+          <div class="kgroup">
+            <p class="kgroup__word"><small>04 / 04</small><span>Motion & 3D</span></p>
+            <div class="kgroup__thumbs"><figure class="kthumb kthumb--0"><img src="/images/motion/motion-tile.webp" alt="" loading="lazy"></figure><figure class="kthumb kthumb--1"><img src="/images/motion/motion-zoom.webp" alt="" loading="lazy"></figure><figure class="kthumb kthumb--2"><img src="/images/vante/vante-hero.webp" alt="" loading="lazy"></figure></div>
+          </div>
         </div>
         <p class="swipe-hint" aria-hidden="true">Arraste para o lado →</p>
         <div class="fronts">
